@@ -14,7 +14,7 @@ include:
   - "MLproject"
 scripts:
   - name: "Adopt project structure"
-    cmd: "mv src/module.py src/{{ MODULE_NAME }}.py && mv src {{ MODULE_NAME }} && mv tests/module_tests.py tests/{{ MODULE_NAME }}_tests.py"
+    cmd: "mv src/module.py src/{{ LIBRARY_NAME }}.py && mv src {{ LIBRARY_NAME }} && mv tests/module_tests.py tests/{{ LIBRARY_NAME }}_tests.py"
   - name: "Initialize git repository"
     cmd: "git init && git add . && git commit -am \"Initial commit. Powered by Maquette.\""
 message: |-
