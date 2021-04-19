@@ -1,15 +1,12 @@
 variables:
-  - name: "PROJECT_NAME"
-    label: "Project Name"
+  - name: "LIBRARY_NAME"
+    label: "Library Name"
     default: "{{ DIRECTORY }}"
   - name: "DESCRIPTION"
     label: "Description"
   - name: "AUTHOR"
     label: "Author"
     default: "{{ USER_NAME }} <{{ USER_EMAIL }}>"
-  - name: "MODULE_NAME"
-    label: "Module Name"
-    default: "{{ PROJECT_NAME }}"
 include:
   - "*.py"
   - "*.md"
@@ -17,7 +14,7 @@ include:
   - "MLproject"
 scripts:
   - name: "Adopt project structure"
-    cmd: "mv src {{ MODULE_NAME }}"
+    cmd: "mv src/module.py src/{{ MODULE_NAME }}.py && mv src {{ MODULE_NAME }} && mv tests/module_tests.py tests/{{ MODULE_NAME }}_tests.py"
   - name: "Initialize git repository"
     cmd: "git init && git add . && git commit -am \"Initial commit. Powered by Maquette.\""
 message: |-

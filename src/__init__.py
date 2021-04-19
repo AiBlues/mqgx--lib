@@ -1,1 +1,1 @@
-# This file ensures that this is a Python module
+from .{{ LIBRARY_NAME }} import *
