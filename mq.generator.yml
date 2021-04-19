@@ -19,7 +19,7 @@ scripts:
     cmd: "git init && git add . && git commit -am \"Initial commit. Powered by Maquette.\""
 message: |-
   #
-  # Successfully created new workspace {{ PROJECT_NAME }}!
+  # Successfully created new workspace for library {{ LIBRARY_NAME }}!
   #
   # Run the following commands to use your new workspace
   #
